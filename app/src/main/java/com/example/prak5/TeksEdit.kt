@@ -14,3 +14,17 @@ fun FormDataDiri(modifier: Modifier) {
     var jenis by remember { mutableStateOf("") }
 
     val gender:List<String> = listOf("Laki-laki","Perempuan")
+
+    Column(modifier = modifier.padding(top=50.dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally) {
+        OutlinedTextField(
+            value = TextName,
+            singleLine = true,
+            shape = MaterialTheme.shapes.large,
+            modifier = Modifier.width(width = 250.dp),
+            label = { Text(text = "Nama Lengkap") },
+            onValueChange = { TextName = it }
+        )
+    }
+})
