@@ -1,4 +1,5 @@
 import android.R
+import android.widget.Button
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
 
@@ -75,4 +77,15 @@ fun FormDataDiri(modifier: Modifier) {
         thickness = dimensionResource(R.dimen.divider_tipis),
         color = Color.DarkGray
     )
+    Button(
+        modifier = Modifier.fillMaxWidth(),
+        enabled = textAlamat.isNotEmpty(),
+        onClick {
+            nama = TextName
+            jenis = textJK
+            alamat = textAlamat
+        }
+    ) {
+        Text(text = stringResource(R.string.submit))
+    }
 })
