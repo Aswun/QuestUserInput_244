@@ -1,8 +1,8 @@
 import android.R
-import android.widget.Button
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
@@ -10,6 +10,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -78,7 +79,7 @@ fun FormDataDiri(modifier: Modifier) {
         color = Color.DarkGray
     )
     Button(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth(fraction = 1f),
         enabled = textAlamat.isNotEmpty(),
         onClick {
             nama = TextName
@@ -88,4 +89,12 @@ fun FormDataDiri(modifier: Modifier) {
     ) {
         Text(text = stringResource(R.string.submit))
     }
+
+    HorizontalDivider(
+        modifier = Modifier.padding(
+            bottom = dimensionResource(R.dimen.padding_medium),
+            top = dimensionResource(R.dimen.padding_medium)),
+        thickness = dimensionResource(R.dimen.divider_tipis),
+        color = Color.DarkGray
+    )
 })
