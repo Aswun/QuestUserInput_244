@@ -69,5 +69,7 @@ fun FormDataDiri(modifier: Modifier) {
                 fontWeight = FontWeight.Bold
             )
         }
+
+        Spacer(modifier = Modifier.height(20.dp))
     }
 }
