@@ -1,5 +1,6 @@
 package com.example.prak5
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -53,5 +54,13 @@ fun FormDataDiri(modifier: Modifier) {
         .padding(top = 40.dp),
         horizontalAlignment = Alignment.CenterHorizontally
         ) {
+        Box (
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(80.dp)
+                .background(Color(0xFF6A1B9A))
+                .padding(start = 20.dp, bottom = 10.dp),
+            contentAlignment = Alignment.BottomStart
+        )
     }
 }
