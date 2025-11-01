@@ -35,11 +35,14 @@ fun FormDataDiri(modifier: Modifier) {
     var TextName by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
     var textJK by remember { mutableStateOf("") }
+    var textStatus by remember { mutableStateOf("") }
 
     //variabel-variabel untuk menyimpan data yang diperoleh dari komponen
     var nama by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
     var jenis by remember { mutableStateOf("") }
+    var status by remember { mutableStateOf("") }
+
 
     val gender: List<String> = listOf("Laki-laki", "Perempuan")
     val statusOptions: List<String> = listOf("Janda", "Lajang", "Duda")
