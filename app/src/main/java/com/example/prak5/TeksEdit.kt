@@ -56,7 +56,7 @@ fun FormDataDiri(modifier: Modifier) {
     val listStatus = listOf("Janda", "Lajang", "Duda")
 
     Column (
-        modifer = modifier
+        modifier = Modifier
         .fillMaxWidth()
         .padding(top = 40.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -182,6 +182,7 @@ fun FormDataDiri(modifier: Modifier) {
                         Text("Status : $statusHasil", color = Color.White)
                         Text("Alamat : $alamatHasil", color = Color.White)
                     }
+                }
             }
         }
     }
