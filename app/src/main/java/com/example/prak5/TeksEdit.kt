@@ -82,7 +82,16 @@ fun FormDataDiri(modifier: Modifier) {
             Column(
                 modifier = Modifier.padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
-            )
+            ) {
+                // Nama
+                Text("Nama Lengkap", fontWeight = FontWeight.SemiBold)
+                OutlinedTextField(
+                    value = namaInput,
+                    onValueChange = { namaInput = it },
+                    label = { Text("Nama Lengkap") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(0.9f)
+            }
         }
     }
 }
