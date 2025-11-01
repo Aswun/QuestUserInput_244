@@ -33,20 +33,20 @@ import androidx.compose.runtime.setValue
 @Composable
 fun FormDataDiri(modifier: Modifier) {
     //variabel-variabel untuk mengingat nilai masukan dari keyboard
-    var TextName by remember { mutableStateOf("") }
-    var textAlamat by remember { mutableStateOf("") }
-    var textJK by remember { mutableStateOf("") }
-    var textStatus by remember { mutableStateOf("") }
+    var namaInput by remember { mutableStateOf("") }
+    var alamatInput by remember { mutableStateOf("") }
+    var genderInput by remember { mutableStateOf("") }
+    var statusInput by remember { mutableStateOf("") }
 
     //variabel-variabel untuk menyimpan data yang diperoleh dari komponen
-    var nama by remember { mutableStateOf("") }
-    var alamat by remember { mutableStateOf("") }
-    var jenis by remember { mutableStateOf("") }
-    var status by remember { mutableStateOf("") }
+    var namaHasil by remember { mutableStateOf("") }
+    var alamatHasil by remember { mutableStateOf("") }
+    var genderHasil by remember { mutableStateOf("") }
+    var statusHasil by remember { mutableStateOf("") }
 
 
-    val gender: List<String> = listOf("Laki-laki", "Perempuan")
-    val statusOptions: List<String> = listOf("Janda", "Lajang", "Duda")
+    val listGender = listOf("Laki-laki", "Perempuan")
+    val listStatus = listOf("Janda", "Lajang", "Duda")
 
     Column (
         modifer = modifier
