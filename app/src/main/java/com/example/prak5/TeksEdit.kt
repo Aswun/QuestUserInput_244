@@ -157,6 +157,24 @@ fun FormDataDiri(modifier: Modifier) {
                 ) {
                     Text("Submit", color = Color.White, fontSize = 16.sp)
                 }
+
+                ElevatedCard(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 12.dp)
+                        .height(120.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.Black),
+                    elevation = CardDefaults.cardElevation(10.dp)
+                ) {
+                    Column(
+                        modifier = Modifier.padding(12.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text("Nama   : $namaHasil", color = Color.White)
+                        Text("Gender : $genderHasil", color = Color.White)
+                        Text("Status : $statusHasil", color = Color.White)
+                        Text("Alamat : $alamatHasil", color = Color.White)
+                    }
             }
         }
     }
