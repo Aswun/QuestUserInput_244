@@ -91,6 +91,19 @@ fun FormDataDiri(modifier: Modifier) {
                     label = { Text("Nama Lengkap") },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(0.9f)
+                )
+
+                Text("Jenis Kelamin", fontWeight = FontWeight.SemiBold)
+                listGender.forEach { opsi ->
+                    Row(
+                        modifier = Modifier
+                            .selectable(
+                                selected = genderInput == opsi,
+                                onClick = { genderInput = opsi }
+                            )
+                            .padding(start = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    )
             }
         }
     }
