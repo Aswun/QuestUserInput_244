@@ -128,7 +128,18 @@ fun FormDataDiri(modifier: Modifier) {
                             onClick = { statusInput = opsi }
                         )
                         Text(opsi)
+                    }
                 }
+
+                Text("Alamat", fontWeight = FontWeight.SemiBold)
+                OutlinedTextField(
+                    value = alamatInput,
+                    onValueChange = { alamatInput = it },
+                    label = { Text("Alamat Lengkap") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(0.9f)
+                )
+            }
         }
     }
 }
