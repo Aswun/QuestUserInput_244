@@ -78,6 +78,11 @@ fun FormDataDiri(modifier: Modifier) {
                 .padding(horizontal = 16.dp),
             shape = RoundedCornerShape(16.dp),
             elevation = CardDefaults.cardElevation(6.dp)
-        )
+        ) {
+            Column(
+                modifier = Modifier.padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            )
+        }
     }
 }
