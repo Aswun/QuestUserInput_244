@@ -103,7 +103,12 @@ fun FormDataDiri(modifier: Modifier) {
                             )
                             .padding(start = 4.dp),
                         verticalAlignment = Alignment.CenterVertically
-                    )
+                    ) {
+                        RadioButton(
+                            selected = genderInput == opsi,
+                            onClick = { genderInput = opsi }
+                        )
+                        Text(opsi)
             }
         }
     }
