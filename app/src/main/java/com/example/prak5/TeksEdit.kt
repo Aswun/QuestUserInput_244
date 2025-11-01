@@ -139,6 +139,24 @@ fun FormDataDiri(modifier: Modifier) {
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(0.9f)
                 )
+
+                // Tombol Submit
+                Button(
+                    onClick = {
+                        namaHasil = namaInput
+                        genderHasil = genderInput
+                        alamatHasil = alamatInput
+                        statusHasil = statusInput
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 8.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1976D2)),
+                    shape = RoundedCornerShape(30.dp),
+                    enabled = alamatInput.isNotEmpty()
+                ) {
+                    Text("Submit", color = Color.White, fontSize = 16.sp)
+                }
             }
         }
     }
