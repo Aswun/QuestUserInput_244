@@ -61,6 +61,13 @@ fun FormDataDiri(modifier: Modifier) {
                 .background(Color(0xFF6A1B9A))
                 .padding(start = 20.dp, bottom = 10.dp),
             contentAlignment = Alignment.BottomStart
-        )
+        ) {
+            Text(
+                text = "Formulir Pendaftaran",
+                color = Color.White,
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
     }
 }
