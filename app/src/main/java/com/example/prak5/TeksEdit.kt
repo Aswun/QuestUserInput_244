@@ -109,7 +109,21 @@ fun FormDataDiri(modifier: Modifier) {
                             onClick = { genderInput = opsi }
                         )
                         Text(opsi)
-            }
+                    }
+                }
+
+                Text("Status Perkawinan", fontWeight = FontWeight.SemiBold)
+                listStatus.forEach { opsi ->
+                    Row(
+                        modifier = Modifier
+                            .selectable(
+                                selected = statusInput == opsi,
+                                onClick = { statusInput = opsi }
+                            )
+                            .padding(start = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    )
+                }
         }
     }
 }
