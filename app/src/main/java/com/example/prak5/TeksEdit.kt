@@ -71,5 +71,13 @@ fun FormDataDiri(modifier: Modifier) {
         }
 
         Spacer(modifier = Modifier.height(20.dp))
+
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp),
+            shape = RoundedCornerShape(16.dp),
+            elevation = CardDefaults.cardElevation(6.dp)
+        )
     }
 }
